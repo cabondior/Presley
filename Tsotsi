@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Presley Chweneyagae</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background: #444;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #666;
+    }
+    section {
+      display: none;
+      padding: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    .photos img, .videos iframe {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Presley Chweneyagae</h1>
+    <p>Actor • Storyteller • Icon</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('photos')">Photos</a>
+    <a href="#" onclick="showSection('videos')">Videos</a>
+  </nav>
+
+  <main>
+    <section id="home" class="active">
+      <h2>Welcome</h2>
+      <p>Welcome to the official page of Presley Chweneyagae, the acclaimed South African actor best known for his role in the Oscar-winning film "Tsotsi".</p>
+    </section>
+
+    <section id="about">
+      <h2>About Presley</h2>
+      <p>Presley Chweneyagae is a South African actor with deep roots in theatre and film. He gained international fame for his lead role in "Tsotsi" and has continued to inspire audiences through impactful storytelling and powerful performances.</p>
+    </section>
+
+    <section id="photos" class="photos">
+      <h2>Photos</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Presley_Chweneyagae_2011.jpg/800px-Presley_Chweneyagae_2011.jpg" alt="Presley Chweneyagae">
+      <img src="https://media.snl.no/media/41172/article_topimage_presley_chweneyagae_tsotsi.jpg" alt="Presley in Tsotsi">
+    </section>
+
+    <section id="videos" class="videos">
+      <h2>Videos</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/0O_E2c1o1r8" title="Presley Interview" frameborder="0" allowfullscreen></iframe>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('main section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
